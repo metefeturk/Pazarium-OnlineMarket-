@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>İlanlar - Pazarium</title><link rel="stylesheet" href="../css/style.css"></head><body>
+
+<div class="topbar">
+  <div class="container">
+    <div>Detaylı arama · Güvenli alışveriş deneyimi · Profesyonel pazar yeri vitrini</div>
+    <div>Hoş geldin, <strong data-current-user>Misafir</strong></div>
+  </div>
+</div>
+<header class="main-header">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-title">Pazarium</div>
+        <div class="brand-subtitle">İkinci el alım satım platformu</div>
+      </div>
+    </a>
+    <form class="header-search" action="../pages/listings.html">
+      <input type="text" name="q" placeholder="Ne aramıştın? Telefon, araç, bilgisayar...">
+      <select name="category" data-categories data-placeholder="Kategori"></select>
+      <select name="city" data-cities data-placeholder="Şehir"></select>
+      <button class="search-btn" aria-label="Ara">⌕</button>
+    </form>
+    <div class="header-actions" id="authArea" data-base="../"></div>
+  </div>
+</header>
+
+<section class="page-hero"><div class="container"><div class="section-head"><div><h1 class="section-title">İlanlar</h1><p class="section-subtitle">Sahibinden benzeri yapıya yakın olarak; filtre, kart düzeni, şehir ve kategori combobox mantığı ile tasarlandı.</p></div><div class="ribbon-note" id="listingCount"></div></div></div></section>
+<section class="section"><div class="container page-grid">
+  <aside class="sidebar"><div class="sidebar-card"><h3>Kategori Geçişleri</h3><nav class="category-list">
+    <a href="listings.html">Tüm İlanlar</a>
+    <a href="listings.html?category=telefon">Cep Telefonu</a>
+    <a href="listings.html?category=bilgisayar">Bilgisayar</a>
+    <a href="listings.html?category=vasita">Vasıta</a>
+    <a href="listings.html?category=ev-esyasi">Ev Eşyası</a>
+    <a href="listings.html?category=kamera">Fotoğraf & Kamera</a>
+    <a href="listings.html?category=mobilya">Mobilya</a>
+  </nav></div></aside>
+  <main class="page-main">
+    <div class="filter-bar">
+      <input id="filterQuery" type="text" placeholder="Ürün adı, marka veya model ara">
+      <select id="filterCategory" data-categories data-placeholder="Kategori seç"></select>
+      <select id="filterCity" data-cities data-placeholder="Şehir seç"></select>
+      <select id="filterSort"><option value="newest">En Yeni</option><option value="priceAsc">Fiyat Artan</option><option value="priceDesc">Fiyat Azalan</option></select>
+      <button class="outline-btn" id="clearFilters">Temizle</button>
+      <div class="filter-icon">☰</div>
+    </div>
+    <div id="listingGrid" class="grid-cards"></div>
+  </main>
+</div></section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="min-width:auto">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Pazarium</div>
+          <div class="brand-subtitle">Profesyonel ikinci el pazar yeri prototipi</div>
+        </div>
+      </div>
+      <small>Bu sürüm, MySQL entegrasyonundan önce akış ve tasarımın oturması için hazırlanmış statik + localStorage çalışan prototiptir.</small>
+    </div>
+    <div>
+      <small>Şehir seçimi ve kategori seçimi combobox mantığında çalışır. Kullanıcılar kendi ilanlarını “İlanlarım” alanında görür.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script><script src="../js/store.js"></script><script src="../js/ui.js"></script><script src="../js/listings.js"></script>
+</body></html>

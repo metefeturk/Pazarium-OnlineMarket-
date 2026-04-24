@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>İlanlarım - Pazarium</title><link rel="stylesheet" href="../css/style.css"></head><body>
+
+<div class="topbar">
+  <div class="container">
+    <div>Detaylı arama · Güvenli alışveriş deneyimi · Profesyonel pazar yeri vitrini</div>
+    <div>Hoş geldin, <strong data-current-user>Misafir</strong></div>
+  </div>
+</div>
+<header class="main-header">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-title">Pazarium</div>
+        <div class="brand-subtitle">İkinci el alım satım platformu</div>
+      </div>
+    </a>
+    <form class="header-search" action="../pages/listings.html">
+      <input type="text" name="q" placeholder="Ne aramıştın? Telefon, araç, bilgisayar...">
+      <select name="category" data-categories data-placeholder="Kategori"></select>
+      <select name="city" data-cities data-placeholder="Şehir"></select>
+      <button class="search-btn" aria-label="Ara">⌕</button>
+    </form>
+    <div class="header-actions" id="authArea" data-base="../"></div>
+  </div>
+</header>
+
+<section class="section"><div class="container">
+  <div class="section-head"><div><h1 class="section-title">İlanlarım</h1><p class="section-subtitle"><span id="welcomeUser"></span> hesabına ait oluşturduğun ilanlar burada listelenir.</p></div><a class="primary-btn" href="create-listing.html">Yeni İlan Ekle</a></div>
+  <div class="account-summary">
+    <div class="summary-tile"><div class="hint">Toplam ilan</div><div class="value" id="myCount">0</div></div>
+    <div class="summary-tile"><div class="hint">Kayıtlı şehir</div><div class="value" id="myCity">-</div></div>
+    <div class="summary-tile"><div class="hint">Panel durumu</div><div class="value">Aktif</div></div>
+  </div>
+  <div id="myListingsGrid" class="grid-cards"></div>
+</div></section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="min-width:auto">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Pazarium</div>
+          <div class="brand-subtitle">Profesyonel ikinci el pazar yeri prototipi</div>
+        </div>
+      </div>
+      <small>Bu sürüm, MySQL entegrasyonundan önce akış ve tasarımın oturması için hazırlanmış statik + localStorage çalışan prototiptir.</small>
+    </div>
+    <div>
+      <small>Şehir seçimi ve kategori seçimi combobox mantığında çalışır. Kullanıcılar kendi ilanlarını “İlanlarım” alanında görür.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script><script src="../js/store.js"></script><script src="../js/ui.js"></script><script src="../js/my-listings.js"></script>
+</body></html>

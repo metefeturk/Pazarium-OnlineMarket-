@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kayıt Ol - Pazarium</title><link rel="stylesheet" href="../css/style.css"></head><body>
+
+<div class="topbar">
+  <div class="container">
+    <div>Detaylı arama · Güvenli alışveriş deneyimi · Profesyonel pazar yeri vitrini</div>
+    <div>Hoş geldin, <strong data-current-user>Misafir</strong></div>
+  </div>
+</div>
+<header class="main-header">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-title">Pazarium</div>
+        <div class="brand-subtitle">İkinci el alım satım platformu</div>
+      </div>
+    </a>
+    <form class="header-search" action="../pages/listings.html">
+      <input type="text" name="q" placeholder="Ne aramıştın? Telefon, araç, bilgisayar...">
+      <select name="category" data-categories data-placeholder="Kategori"></select>
+      <select name="city" data-cities data-placeholder="Şehir"></select>
+      <button class="search-btn" aria-label="Ara">⌕</button>
+    </form>
+    <div class="header-actions" id="authArea" data-base="../"></div>
+  </div>
+</header>
+
+<section class="section"><div class="container"><div class="surface auth-card"><h1 class="section-title" style="font-size:30px">Yeni hesap oluştur</h1><p class="section-subtitle">Bu aşamada hesaplar tarayıcıda localStorage ile tutulur. Sonraki turda aynısını MySQL tabanlı gerçek sisteme taşıyacağız.</p>
+<form id="registerForm" class="form-grid" style="margin-top:16px">
+<input id="fullName" type="text" placeholder="Ad Soyad" required>
+<input id="phone" type="text" placeholder="Telefon" required>
+<input class="full" id="registerEmail" type="email" placeholder="E-posta" required>
+<select id="city" data-cities data-placeholder="Şehir seç" required></select>
+<input id="registerPassword" type="password" placeholder="Şifre" required>
+<div></div>
+<button class="primary-btn full" style="padding:15px 16px">Hesap Oluştur</button>
+</form><div class="auth-switch">Zaten hesabın var mı? <a href="login.html" style="color:var(--blue);font-weight:700">Giriş yap</a></div></div></div></section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="min-width:auto">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Pazarium</div>
+          <div class="brand-subtitle">Profesyonel ikinci el pazar yeri prototipi</div>
+        </div>
+      </div>
+      <small>Bu sürüm, MySQL entegrasyonundan önce akış ve tasarımın oturması için hazırlanmış statik + localStorage çalışan prototiptir.</small>
+    </div>
+    <div>
+      <small>Şehir seçimi ve kategori seçimi combobox mantığında çalışır. Kullanıcılar kendi ilanlarını “İlanlarım” alanında görür.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script><script src="../js/store.js"></script><script src="../js/ui.js"></script><script src="../js/auth.js"></script>
+</body></html>

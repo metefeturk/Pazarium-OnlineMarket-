@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pazarium - İkinci El Alım Satım Platformu</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+
+<div class="topbar">
+  <div class="container">
+    <div>Detaylı arama · Güvenli alışveriş deneyimi · Profesyonel pazar yeri vitrini</div>
+    <div>Hoş geldin, <strong data-current-user>Misafir</strong></div>
+  </div>
+</div>
+<header class="main-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-title">Pazarium</div>
+        <div class="brand-subtitle">İkinci el alım satım platformu</div>
+      </div>
+    </a>
+    <form class="header-search" action="pages/listings.html">
+      <input type="text" name="q" placeholder="Ne aramıştın? Telefon, araç, bilgisayar...">
+      <select name="category" data-categories data-placeholder="Kategori"></select>
+      <select name="city" data-cities data-placeholder="Şehir"></select>
+      <button class="search-btn" aria-label="Ara">⌕</button>
+    </form>
+    <div class="header-actions" id="authArea" data-base=""></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">⚡ Modern pazar yeri deneyimi · Sahip olduğun ürünü hızla vitrine çıkar</span>
+          <h1>İkinci el alışverişi daha güvenli, daha hızlı ve daha şık hale getir.</h1>
+          <p>Sahibinden benzeri akış mantığıyla tasarlanmış bu sürümde öne çıkan ilanlar, detaylı kart yapısı, güçlü ilan detay sayfası ve doğrudan fotoğraf seçerek ilan ekleme deneyimi yer alıyor.</p>
+          <div class="hero-stats">
+            <div class="stat-card"><div class="stat-value">8+</div><div class="stat-label">Hazır demo ilan</div></div>
+            <div class="stat-card"><div class="stat-value">Yerel</div><div class="stat-label">Fotoğraf yükleme önizlemesi</div></div>
+            <div class="stat-card"><div class="stat-value">Kendi</div><div class="stat-label">İlanlarını yönet</div></div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <img src="assets/images/hero-market.svg" alt="Pazar yeri vitrini">
+          <h3>Ürününü birkaç adımda yayınla</h3>
+          <p>Kategori ve şehir seçimi dropdown mantığında çalışır. Fotoğraf URL’i yerine doğrudan bilgisayarından görsel seçip anında önizleyebilirsin.</p>
+          <div class="badges">
+            <span class="badge">Fotoğraf seçerek ilan ver</span>
+            <span class="badge">Benzer ilan kartları</span>
+            <span class="badge">Modern detay ekranı</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container content-grid">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h3>Kategoriler</h3>
+        <nav class="category-list">
+          <a class="active" href="pages/listings.html">Tüm İlanlar <span>›</span></a>
+          <a href="pages/listings.html?category=telefon">Cep Telefonu <span>›</span></a><a href="pages/listings.html?category=bilgisayar">Bilgisayar <span>›</span></a><a href="pages/listings.html?category=vasita">Vasıta <span>›</span></a><a href="pages/listings.html?category=ev-esyasi">Ev Eşyası <span>›</span></a><a href="pages/listings.html?category=kamera">Fotoğraf & Kamera <span>›</span></a><a href="pages/listings.html?category=mobilya">Mobilya <span>›</span></a>
+        </nav>
+      </div>
+    </aside>
+    <main class="page-main">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Öne çıkan vitrin ilanları</h2>
+          <p class="section-subtitle">Fiyat, kategori ve satıcı yapısı öne çıkarılmış profesyonel kart görünümü.</p>
+        </div>
+        <a class="outline-btn" href="pages/listings.html">Tüm ilanlara git</a>
+      </div>
+      <div id="featuredListings" class="grid-cards"></div>
+    </main>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Yeni eklenen ilanlar</h2>
+        <p class="section-subtitle">Liste ve detay ekranlarında aynı profesyonel görünüm korunur.</p>
+      </div>
+    </div>
+    <div id="latestListings" class="grid-cards"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="min-width:auto">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Pazarium</div>
+          <div class="brand-subtitle">Profesyonel ikinci el pazar yeri prototipi</div>
+        </div>
+      </div>
+      <small>Bu sürüm, MySQL entegrasyonundan önce akış ve tasarımın oturması için hazırlanmış statik + localStorage çalışan prototiptir.</small>
+    </div>
+    <div>
+      <small>Şehir seçimi ve kategori seçimi combobox mantığında çalışır. Kullanıcılar kendi ilanlarını “İlanlarım” alanında görür.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script><script src="js/store.js"></script><script src="js/ui.js"></script><script src="js/main.js"></script>
+</body></html>
